@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Animal Abandonado | Adopción de Perros y Gatos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #4CAF50, #2ecc71);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .report-container {
+            background: rgba(5, 5, 5, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            transform: translateY(-20px);
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ffffff;
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        label {
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            background: #fff;
+            color: #333;
+            font-size: 1em;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            outline: none;
+            border-color: #ffffff;
+            box-shadow: 0 0 10px rgba(255, 99, 71, 0.6);
+            transform: scale(1.05);
+        }
+
+        button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #4CAF50;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .back-link {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: white;
+            animation: fadeInText 1.5s ease-out 0.7s;
+        }
+
+        .back-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            color: #4CAF50;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Estilo para el mensaje de éxito */
+        .success-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <h1>Reportar Animal Abandonado</h1>
+
+        <!-- Mensaje de éxito -->
+        <div id="successMessage" class="success-message">
+            ¡Reporte Enviado Exitosamente!
+        </div>
+
+        <form id="reportForm">
+            <div>
+                <label for="name">Tu Nombre:</label>
+                <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+            </div>
+            <div>
+                <label for="animal-type">Tipo de Animal:</label>
+                <input type="text" id="animal-type" name="animal-type" required placeholder="Perro o Gato.">
+            </div>
+            <div>
+                <label for="location">Ubicación del Animal:</label>
+                <input type="text" id="location" name="location" required placeholder="Dirección o zona aproximada">
+            </div>
+            <div>
+                <label for="description">Descripción del Animal:</label>
+                <textarea id="description" name="description" required placeholder="Describe al animal y su estado."></textarea>
+            </div>
+            <div>
+                <label for="contact">Tu Correo Electrónico:</label>
+                <input type="email" id="contact" name="contact" required placeholder="ejemplo@dominio.com">
+            </div>
+            <button type="submit">Enviar Reporte</button>
+        </form>
+        
+        <div class="back-link">
+            <p><a href="index.html">Volver a la Página Principal</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Al enviar el formulario
+        document.getElementById('reportForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+            // Simular el envío exitoso
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block'; // Mostrar el mensaje de éxito
+
+            // Limpiar el formulario
+            document.getElementById('reportForm').reset();
+
+            // Después de 3 segundos ocultar el mensaje de éxito
+            setTimeout(function() {
+                successMessage.style.display = 'none';
+            }, 3000); // 3 segundos
+        });
+    </script>
+</body>
+</html>

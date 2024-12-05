@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedir una Cita | Adopción de Perros y Gatos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #4CAF50, #2ecc71);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            flex-direction: column;
+        }
+
+        header {
+            width: 100%;
+            background-color: #2ecc71;
+            padding: 10px 0;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        header img {
+            max-width: 120px;
+            margin-left: 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        label {
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"], input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            background: #fff;
+            color: #333;
+            font-size: 1em;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="time"]:focus {
+            outline: none;
+            border-color: #ffffff;
+        }
+
+        button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+
+        .success-message {
+            margin-top: 15px;
+            font-size: 1.1em;
+            color: #62e683;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="imagenes/logoprincipal.png" alt="Logotipo principal de la página de adopción de animales" class="logo">
+        <nav>
+            <ul>
+                <li><a href="catalog.html" aria-label="Enlace al catálogo de animales disponibles para adopción">Catálogo</a></li>
+                <li><a href="report.html" aria-label="Enlace para reportar un animal abandonado">Reportar Animal</a></li>
+                <li><a href="register.html" aria-label="Enlace para registrarse como usuario">Registrarse</a></li>
+                <li><a href="login.html" aria-label="Enlace para iniciar sesión">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h1>Pedir una Cita</h1>
+        <form id="appointment-form" aria-label="Formulario para solicitar una cita de adopción">
+            <div>
+                <label for="animal-name">Nombre del Animal:</label>
+                <input type="text" id="animal-name" name="animal-name" placeholder="Ejemplo: Rex (3)" required aria-required="true" aria-describedby="animal-help">
+                <small id="animal-help">Escribe el nombre y el número de referencia del animal.</small>
+            </div>
+            <div>
+                <label for="user-name">Tu Nombre:</label>
+                <input type="text" id="user-name" name="user-name" placeholder="Tu nombre completo" required aria-required="true">
+            </div>
+            <div>
+                <label for="user-email">Correo Electrónico:</label>
+                <input type="email" id="user-email" name="user-email" placeholder="ejemplo@correo.com" required aria-required="true">
+            </div>
+            <div>
+                <label for="appointment-date">Fecha de la Cita:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required aria-required="true">
+            </div>
+            <div>
+                <label for="appointment-time">Hora de la Cita:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required aria-required="true">
+            </div>
+            <button type="submit" aria-label="Enviar la solicitud de cita">Solicitar Cita</button>
+        </form>
+        <p id="success-message" class="success-message" aria-live="polite">¡Cita solicitada con éxito!</p>
+    </div>
+
+    <script>
+        document.getElementById('appointment-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío por defecto
+            const successMessage = document.getElementById('success-message');
+
+            // Mostrar el mensaje de éxito
+            successMessage.style.display = 'block';
+
+            // Limpiar el formulario
+            this.reset();
+        });
+    </script>
+</body>
+</html>

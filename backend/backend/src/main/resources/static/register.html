@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #4CAF50, #2ecc71);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            flex-direction: column;
+        }
+
+        header {
+            width: 100%;
+            background-color: #2ecc71;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        header img {
+            max-width: 120px;
+            margin-left: 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        label {
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="email"], input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            background: #fff;
+            color: #333;
+            font-size: 1em;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: #ffffff;
+        }
+
+        button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+
+        .forgot-password {
+            margin-top: 15px;
+            font-size: 1em;
+            color: #ff6347;
+        }
+
+        .forgot-password a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .forgot-password a:hover {
+            color: #ff8c00;
+        }
+
+        .register-link {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        .register-link a {
+            color: #62e683;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Formulario de Registro</h1>
+        <form id="registerForm">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required placeholder="Ingresa tu correo electrónico"><br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña"><br>
+
+            <label for="rol">Rol:</label>
+            <input type="text" id="rol" name="rol" required placeholder="Ingresa tu rol (Ej. Admin, User)"><br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos"><br>
+
+            <label for="identificacion">Identificación:</label>
+            <input type="text" id="identificacion" name="identificacion" placeholder="Ingresa tu número de identificación"><br>
+
+            <button type="submit">Registrar</button>
+        </form>
+        <div class="register-link">
+            <p><a href="login.html">¿Ya tienes una cuenta? Iniciar sesión</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Para evitar el envío tradicional del formulario
+
+            const correo = document.getElementById('correo').value;
+            const password = document.getElementById('password').value;
+            const rol = document.getElementById('rol').value || 'USER';  // Valor por defecto
+            const apellidos = document.getElementById('apellidos').value || 'No especificado';
+            const identificacion = document.getElementById('identificacion').value || 'No especificada';
+
+            const userData = {
+                correo: correo,
+                password: password,
+                rol: rol,
+                apellidos: apellidos,
+                identificacion: identificacion
+            };
+
+            // Realizar la solicitud POST con el JSON
+            fetch('http://localhost:8080/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'  // Aquí le indicamos que el cuerpo será JSON
+                },
+                body: JSON.stringify(userData)  // Convertir el objeto en JSON
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Usuario registrado con éxito:', data);
+                alert('Usuario registrado con éxito');
+            })
+            .catch(error => {
+                console.error('Error al registrar el usuario:', error);
+                alert('Error al registrar el usuario');
+            });
+        });
+    </script>
+</body>
+</html>

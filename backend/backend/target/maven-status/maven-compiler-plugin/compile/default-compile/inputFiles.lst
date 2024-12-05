@@ -1,0 +1,16 @@
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\BackendApplication.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\controller\AnimalController.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\controller\EncuentroConAnimalController.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\controller\RegisterController.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\controller\UsuarioController.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\dto\LoginRequest.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\model\Animal.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\model\EncuentroConAnimal.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\model\Usuario.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\repository\AnimalRepository.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\repository\EncuentroConAnimalRepository.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\repository\UsuarioRepository.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\service\AnimalService.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\service\AuthService.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\service\EncuentroConAnimalService.java
+C:\Users\DavidG\Downloads\backend\backend\src\main\java\com\example\backend\service\UsuarioService.java

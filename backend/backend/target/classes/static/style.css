@@ -1,0 +1,207 @@
+/* General */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    margin: 0;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Header - colorido */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4CAF50;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Main Container - estrecho y centrado */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+/* Sección - colores y sombras */
+.mission-vision-purpose, .testimonials, .adoption-process, .donate, .contact {
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #ffffff;
+    border-right: 6px solid #ffffff;
+}
+
+/* Colores en textos */
+.mission-vision-purpose p, .testimonials p, .adoption-process p, .donate p {
+    color: #34495e;
+}
+
+h2 {
+    color: #ffffff;
+    background-color: #4CAF50;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Botones con sombra y colores llamativos */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #4CAF50;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Form */
+.contact form {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer - color oscuro */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: #f3f7f6;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+.mission-vision-purpose .table-container {
+    display: flex; /* Permite que los elementos hijos se dispongan en fila */
+    justify-content: space-between; /* Espacio uniforme entre las tablas */
+    gap: 20px; /* Espacio entre las tablas */
+}
+
+.mission-vision-purpose table {
+    width: 30%; /* Ajusta el ancho de cada tabla como desees */
+    border-collapse: collapse; /* Quita el espacio entre celdas */
+}
+
+.mission-vision-purpose td {
+    padding: 15px; /* Espacio interno en las celdas */
+    vertical-align: top; /* Alinea el contenido en la parte superior */
+}
+
+.mission-vision-purpose img {
+    width: 50px;
+    height: 50px;
+}
+
+.mission-vision-purpose p {
+    max-width: 600px;
+    font-size: 1.1em;
+}
+
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #555;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #4CAF50;
+}
+
+textarea {
+    resize: vertical;
+}

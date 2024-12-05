@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Perros y Gatos en Adopción</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #4CAF50, #70ffac);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2ecc71; /* O el color que prefieras */
+            z-index: 1000; /* Asegura que el header quede encima de otros elementos */
+            padding: 10px 0; /* Ajusta el padding según sea necesario */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Opcional, para darle sombra */
+        }
+
+        header a {
+            display: inline-block; /* Asegura que la imagen del logo se comporte como un bloque */
+        }
+
+        nav {
+            margin-left: auto; /* Esto empuja los enlaces hacia la derecha si deseas */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px; /* Espaciado entre los elementos del menú */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffb84d;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .catalog-container {
+            text-align: center;
+            margin-top: 120px; /* Para que no quede tapado por el header */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .animal-card {
+            display: inline-block;
+            width: 250px;
+            margin: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transform: translateY(-10px);
+            animation: cardSlideUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes cardSlideUp {
+            from {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animal-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #fff;
+        }
+
+        .animal-card .info {
+            padding: 15px;
+        }
+
+        .animal-card h3 {
+            font-size: 1.5em;
+            color: #ffb84d;
+        }
+
+        .animal-card p {
+            font-size: 1em;
+            color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+        .animal-card button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .animal-card button:hover {
+            background-color: #ff6f61;
+        }
+
+        .back-link {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        .back-link a {
+            color: #62e683;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            color: #62e683;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+            <header>
+            <a href="index.html">
+                <img src="imagenes/logoprincipal.png" alt="Logo principal de la página de adopción de animales" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="catalog.html">Catálogo</a></li>
+                    <li><a href="report.html">Reportar Animal</a></li>
+                    <li><a href="register.html">Registrarse</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Catálogo -->
+        <div class="catalog-container">
+            <h1>Catálogo de Perros y Gatos en Adopción</h1>
+    
+            <!-- Ejemplo de Animal 1 -->
+            <div class="animal-card">
+                <img src="imagenes/perro2.png" alt="Rex, un perro mestizo de tamaño mediano con pelaje marrón">
+                <div class="info">
+                    <h3>Rex</h3>
+                    <p>Perro mestizo de tamaño mediano, muy cariñoso y activo.</p>
+                    <p><strong>Descripción adicional:</strong> Rex es ideal para familias con niños y espacios abiertos donde pueda correr y jugar.</p>
+                    <button onclick="window.location.href='descripcion.html'">Ver Detalles</button>
+                </div>
+            </div>
+    
+            <!-- Ejemplo de Animal 2 -->
+            <div class="animal-card">
+                <img src="imagenes/gato3.png" alt="Tommy, un gato adulto con pelaje gris oscuro y ojos amarillos">
+                <div class="info">
+                    <h3>Tommy</h3>
+                    <p>Gato adulto, tranquilo y de compañía.</p>
+                    <p><strong>Descripción adicional:</strong> Tommy es perfecto para personas que buscan un compañero calmado que disfrute de largas siestas.</p>
+                    <button onclick="window.location.href='descripcion2.html'">Ver Detalles</button>
+                </div>
+            </div>
+    
+            <!-- Ejemplo de Animal 3 -->
+            <div class="animal-card">
+                <img src="imagenes/perro3.png" alt="Max, un perro juguetón de tamaño grande con pelaje blanco y manchas negras">
+                <div class="info">
+                    <h3>Max</h3>
+                    <p>Perro juguetón y alegre, busca una familia que lo quiera.</p>
+                    <p><strong>Descripción adicional:</strong> Max necesita una familia activa que le dedique tiempo para jugar y salir de paseo.</p>
+                    <button onclick="window.location.href='descripcion3.html'">Ver Detalles</button>
+                </div>
+            </div>
+    
+            <!-- Ejemplo de Animal 4 -->
+            <div class="animal-card">
+                <img src="imagenes/gato2.png" alt="Luna, una gata con pelaje blanco y manchas negras, de mirada tierna">
+                <div class="info">
+                    <h3>Luna</h3>
+                    <p>Gata cariñosa, ideal para casas con niños pequeños.</p>
+                    <p><strong>Descripción adicional:</strong> Luna es muy sociable y se adapta fácilmente a diferentes ambientes del hogar.</p>
+                    <button onclick="window.location.href='descripcion4.html'">Ver Detalles</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Animal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #4CAF50, #70ffac);
+            margin: 0;
+            padding: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2ecc71;
+            z-index: 1000;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header a {
+            display: inline-block;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffb84d;
+        }
+
+        .animal-detail-container {
+            margin-top: 120px; /* Para que no quede tapado por el header */
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .animal-detail-container img {
+            width: 50%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #f0f0f0;
+            margin: 10px 0;
+        }
+
+        .adopt-button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .adopt-button:hover {
+            background-color: #ff6f61;
+        }
+
+        .back-link {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        .back-link a {
+            color: #62e683;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            color: #62e683;
+        }
+
+        .additional-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .additional-info h2 {
+            font-size: 2em ;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+
+        .additional-info p {
+            font-size: 1em;
+            color: #f0f0f0;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html">
+            <img src="imagenes/logoprincipal.png" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="catalog.html">Catálogo</a></li>
+                <li><a href="report.html">Reportar Animal</a></li>
+                <li><a href="register.html">Registrarse</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Detalles del Animal -->
+    <div class="animal-detail-container">
+        <img src="imagenes/gato2.png" alt="Luna">
+        <h1>Luna</h1>
+        <p><strong>Codigo del animal:</strong> (9)</p>
+        <p><strong>Descripción:</strong> Gata mestiza de tamaño pequeña, muy cariñosa y jugetona.</p>
+        <p><strong>Edad:</strong> 6 meses </p>
+        <p><strong>Raza:</strong> No definida (gata mestiza)</p>
+        <p><strong>Características:</strong> Tiene una personalidad activa y le encanta explorar su entorno. </p>
+        <p><strong>Vacunas:</strong> Al día con todas las vacunas.</p>
+        <a href="cita.html" class="adopt-button">¡Adoptar a Luna!</a>
+        <div class="back-link">
+            <p><a href="catalog.html">Volver al Catálogo</a></p>
+        </div>
+    </div>
+
+    <!-- Nueva sección de información adicional -->
+    <div class="additional-info">
+        <h2>Información Adicional</h2>
+       <p> Luna es una gata de pelaje corto de color naranja claro, con una actitud juguetona y curiosa. </p>
+       <p> Es amigable con otras mascotas y disfruta de la compañía humana. </p>
+       <p> Tiene una personalidad activa y le encanta explorar su entorno.</p>
+    </div>
+</body>
+</html>

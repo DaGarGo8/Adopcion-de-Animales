@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopción de Perros y Gatos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .adopt-text {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .adopt-text a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .adopt-text a:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo para la sección de misión, visión y propósito */
+        .mission-vision-purpose {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            background-color: #ffffff;
+            padding: 40px 20px;
+        }
+
+        .mvp-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mvp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .mvp-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .mvp-card h3 {
+            font-size: 1.5em;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .mvp-card p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Sección de testimonios */
+        .testimonials {
+            background-color: #f7f9fc;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .testimonial-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .testimonial {
+            background: #4CAF50;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #4CAF50;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial img:hover {
+            transform: scale(1.1);
+        }
+
+        .testimonial h3 {
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .testimonial p {
+            font-size: 1em;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Diseño de grid para ¿Cómo Funciona? y Ayuda a los Animales */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .info-grid section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-grid h2 {
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .info-grid ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+            font-size: 1.1em;
+        }
+
+        .info-grid ol li {
+            margin-bottom: 15px;
+        }
+
+        .donate p {
+            font-size: 1.2em;
+            color: #000000;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <img src="imagenes/logoprincipal.png" alt="Logo de Adopción de Perros y Gatos" class="logo">
+        <nav>
+            <ul>
+                <li><a href="catalog.html">Catálogo</a></li>
+                <li><a href="report.html">Reportar Animal</a></li>
+                <li><a href="register.html">Registrarse</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Misión, Visión y Propósito -->
+        <section class="mission-vision-purpose">
+            <div class="mvp-card">
+                <img src="imagenes/logo1.png" alt="Ícono representando nuestra misión">
+                <h3>Misión</h3>
+                <p>Ofrecer un hogar lleno de amor y cuidado a perros y gatos rescatados, brindándoles una segunda oportunidad para una vida feliz. Promovemos la adopción responsable y educamos sobre el bienestar animal.</p>
+            </div>
+            <div class="mvp-card">
+                <img src="imagenes/logo2.png" alt="Ícono simbolizando nuestra visión">
+                <h3>Visión</h3>
+                <p>Ser una organización líder en la promoción de la adopción responsable y en la creación de un mundo donde cada animal tenga un hogar lleno de amor y respeto.</p>
+            </div>
+            <div class="mvp-card">
+                <img src="imagenes/logo3.png" alt="Ícono ilustrando nuestro propósito">
+                <h3>Propósito</h3>
+                <p>Rescatar, rehabilitar y reubicar perros y gatos en situaciones de abandono, promoviendo valores de respeto, empatía y compromiso hacia una comunidad más consciente.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios -->
+        <section class="testimonials">
+            <h2 style="color: white;">Historias de Adopción</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <img src="imagenes/perro1.png" alt="Juan abrazando a Max, su perro adoptado">
+                    <h3>Juan y Max</h3>
+                    <p>"Max ha cambiado mi vida para siempre. Gracias a esta plataforma, encontré un amigo leal y lleno de amor."</p>
+                </div>
+                <div class="testimonial">
+                    <img src="imagenes/gato1.png" alt="Ana jugando con Bella, su gata adoptada">
+                    <h3>Ana y Bella</h3>
+                    <p>Adoptar a Bella fue una de las mejores decisiones que he tomado. Es la compañera perfecta para mis hijos.</p>
+                </div>
+                <div class="testimonial">
+                    <img src="imagenes/testimonio.png" alt="Carlos junto a Rocky, su perro adoptado">
+                    <h3>Carlos y Rocky</h3>
+                    <p>Rocky le ha dado alegría a toda mi familia. Esta plataforma nos permitió encontrar al compañero perfecto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <!-- ¿Cómo Funciona? -->
+            <section class="how-it-works">
+                <h2 style="color: white;">¿Cómo Funciona?</h2>
+                <ol>
+                    <li><strong>Explora el catálogo:</strong> Mira los perfiles de los animales disponibles para adopción.</li>
+                    <li><strong>Solicita información:</strong> Ponte en contacto para obtener detalles sobre un animal.</li>
+                    <li><strong>Visita al animal:</strong> Coordina una visita para conocerlo en persona.</li>
+                    <li><strong>Adopta:</strong> Si todo va bien, realiza la adopción y dale un nuevo hogar.</li>
+                </ol>
+            </section>
+
+            <!-- Ayuda a los Animales -->
+            <section class="donate">
+                <h2 style="color: white;">Ayuda a los Animales</h2>
+                <p>Tu donación ayuda a rescatar y cuidar animales. Con tu apoyo, podemos mejorar sus vidas y ofrecerles una segunda oportunidad.</p>
+                <p><strong>Haz tu donación al siguiente número de cuenta:</strong></p>
+                <p><strong>Cuenta Bancaria: 987-526-423</strong></p>
+            </section>
+        </section>
+
+        <!-- Sección de adopción centrada -->
+        <div class="adopt-text">
+            <h1 style="color: #ff6347;">¡Adopta un amigo peludo!</h1>
+            <p style="color: #ff6347;">Haz una diferencia en la vida de un animal hoy mismo.</p>
+            <a href="catalog.html">Ver Animales Disponibles</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Adopción de Animales</p>
+    </footer>
+</body>
+</html>
